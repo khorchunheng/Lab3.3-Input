@@ -115,7 +115,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         radioButtonMale.setChecked(false);
         radioButtonFemale.setChecked(false);
         checkBoxSmoker.setChecked(false);
-        textViewPremium.setText("Premium");
+        textViewPremium.setText(R.string.premium);
     }
 
 
