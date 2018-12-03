@@ -99,7 +99,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             if(checkBoxSmoker.isChecked())
                 premium+=300;
         }
-        textViewPremium.setText("RM"+premium+"0");
+        textViewPremium.setText(getString(R.string.premium)+" = "+String.format("%.2f",premium));
 
         /*if(gender==R.id.radioButtonMale){
             //TODO calculate extra premium for male
@@ -111,7 +111,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     }
 
     public void reset(View view){
-        spinnerAge.setSelection(0);
+        spinnerAge.setSelection(-1);
         radioButtonMale.setChecked(false);
         radioButtonFemale.setChecked(false);
         checkBoxSmoker.setChecked(false);
