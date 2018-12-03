@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
    private RadioGroup radioGroupGender;
    private RadioButton radioButtonMale,radioButtonFemale;
    private CheckBox checkBoxSmoker;
-   private TextView tetxViewPremium;
+   private TextView textViewPremium;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         radioButtonMale=findViewById(R.id.radioButtonMale);
         radioButtonFemale=findViewById(R.id.radioButtonFemale);
         checkBoxSmoker=findViewById(R.id.checkBoxSmoker);
-        tetxViewPremium=findViewById(R.id.textViewPremium);
+        textViewPremium=findViewById(R.id.textViewPremium);
         ArrayAdapter<CharSequence> adapter=
                 ArrayAdapter.createFromResource(this,R.array.age_group,android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -99,7 +99,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             if(checkBoxSmoker.isChecked())
                 premium+=300;
         }
-        tetxViewPremium.setText("RM"+premium+"0");
+        textViewPremium.setText("RM"+premium+"0");
 
         /*if(gender==R.id.radioButtonMale){
             //TODO calculate extra premium for male
@@ -115,7 +115,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         radioButtonMale.setChecked(false);
         radioButtonFemale.setChecked(false);
         checkBoxSmoker.setChecked(false);
-        tetxViewPremium.setText("Premium");
+        textViewPremium.setText("Premium");
     }
 
 
